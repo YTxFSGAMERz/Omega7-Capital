@@ -85,14 +85,14 @@ html {
   color: var(--bg);
 }
 
-/* Hide scrollbars on all browsers while keeping scroll functional */
-html, body {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE / Edge */
+/* ── Hide ALL scrollbars site-wide ─────────────────────────────────────── */
+/* Elements can still scroll; the bar just won't be visible anywhere.      */
+* {
+  scrollbar-width: none !important;       /* Firefox */
+  -ms-overflow-style: none !important;    /* IE / old Edge */
 }
-
-::-webkit-scrollbar {
-  display: none; /* Chrome / Safari / Opera */
+*::-webkit-scrollbar {
+  display: none !important;               /* Chrome / Safari / Opera */
 }
 
 /* ============================================
