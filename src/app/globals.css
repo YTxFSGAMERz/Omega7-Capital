@@ -75,8 +75,13 @@ html {
 html {
   scroll-behavior: smooth;
   view-transition-name: root;
-  /* Native mobile feel: allow bounce and momentum */
-  overflow-x: hidden;
+  /* FLATTENED SCROLL ARCHITECTURE: Consolidate scroll to root */
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: auto !important;
+  min-height: 100% !important;
+  /* Native hardware-accelerated momentum scrolling */
+  -webkit-overflow-scrolling: touch !important;
 }
 
 body {
@@ -89,11 +94,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  /* Optimization: hide horizontal overflow globally */
-  overflow-x: hidden;
-  /* Momentum scrolling on iOS */
-  -webkit-overflow-scrolling: touch;
+  /* Reset body to allow root-level scrolling without interference */
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
+
 
 /* ── Mobile Touch Optimization ────────────────────────────────────────── */
 /* Disable smooth scroll for touch devices to ensure 1:1 responsiveness    */
