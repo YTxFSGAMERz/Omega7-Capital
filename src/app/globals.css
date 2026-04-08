@@ -75,7 +75,28 @@ html {
 html {
   scroll-behavior: smooth;
   view-transition-name: root;
+  /* iOS momentum / inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent overscroll bounce from feeling laggy */
+  overscroll-behavior-y: none;
 }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-crimson-pro);
+  font-size: 19px;
+  line-height: 1.65;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  /* Let the browser handle vertical pan natively (finger scroll) */
+  touch-action: pan-y;
+  /* Momentum scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
 
 /* ============================================
    Selection & Scrollbar
@@ -101,18 +122,6 @@ html {
 :focus-visible {
   outline: 1px solid var(--text);
   outline-offset: 2px;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-crimson-pro);
-  font-size: 19px;
-  line-height: 1.65;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
 }
 
 /* ============================================
