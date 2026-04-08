@@ -12,14 +12,16 @@ export default function LoadingSkeleton() {
 
     const fadeOut = () => {
       el.style.opacity = '0';
-      el.style.transition = 'opacity 0.3s ease';
+      el.style.pointerEvents = 'none';
+      el.style.transition = 'opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1)';
       setTimeout(() => {
         el.remove();
-      }, 300);
+        document.body.classList.remove('loading-locked');
+      }, 400);
     };
 
-    // Small delay to ensure hydration is complete
-    const timer = setTimeout(fadeOut, 100);
+    // Very small delay to ensure hydration is complete
+    const timer = setTimeout(fadeOut, 50);
     return () => clearTimeout(timer);
   }, []);
 

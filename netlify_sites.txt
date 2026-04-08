@@ -1,0 +1,129 @@
+
+────────────────────────────┐
+ Current Netlify Projects │
+────────────────────────────┘
+
+Count: 25
+
+omega7capital-demo - 93906cae-630e-48b0-bb35-4b29cc74e19c
+  url:  https://omega7capital-demo.netlify.app
+  account: FS
+─────────────────────────────────────────────────
+maryam-birthday-special - a051a461-c947-41d9-b292-6c62b04c963c
+  url:  https://maryam-birthday-special.netlify.app
+  repo: https://github.com/YTxFSGAMERz/maryam-s-birthday-dream
+  account: FS
+─────────────────────────────────────────────────
+hook-and-thread - 6af9b941-68bb-4815-a30f-29cf2ddcfe51
+  url:  https://hook-and-thread.netlify.app
+  repo: https://github.com/YTxFSGAMERz/hook-and-thread
+  account: FS
+─────────────────────────────────────────────────
+query-mind - ebbda7a5-f746-4dfe-ba12-c26cfea52f45
+  url:  https://query-mind.netlify.app
+  repo: https://github.com/YTxFSGAMERz/query-mind
+  account: FS
+─────────────────────────────────────────────────
+secret-messages - c3e7fbe2-767e-4b3b-98ac-b5a864448d5f
+  url:  https://secret-messages.netlify.app
+  repo: https://github.com/Farhans123456/Secret-Message-in-terms-of-Atomic-number
+  account: FS
+─────────────────────────────────────────────────
+vigilant-sphere-geospectra-argus-eye - 88f85724-56a2-4a88-a951-68bd7d556efa
+  url:  https://vigilant-sphere-geospectra-argus-eye.netlify.app
+  repo: https://github.com/YTxFSGAMERz/Vigilant-Sphere-GeoSpectra-Argus-Eye
+  account: FS
+─────────────────────────────────────────────────
+farhan-shaikh-portfolio - defc0f7f-9b7f-47d6-acb6-b80935e15ff7
+  url:  https://farhan-shaikh-portfolio.netlify.app
+  repo: https://github.com/YTxFSGAMERz/YTxFSGAMERz
+  account: FS
+─────────────────────────────────────────────────
+about-fs - be62f85f-d50e-4933-8caf-a914c6af9c8e
+  url:  https://about-fs.netlify.app
+  repo: https://github.com/YTxFSGAMERz/YTxFSGAMERz
+  account: FS
+─────────────────────────────────────────────────
+secret-message-encrypter - c7d38133-dc0f-4a38-bfa2-c9eeb1233785
+  url:  https://secret-message-encrypter.netlify.app
+  repo: https://github.com/Farhans123456/Secret-Message-in-terms-of-Atomic-number
+  account: FS
+─────────────────────────────────────────────────
+alvina-birthday - a15170e2-dbe9-4f13-8f62-6a63b91f193c
+  url:  https://alvina-birthday.netlify.app
+  repo: https://github.com/Farhans123456/alvina-s-birthday
+  account: FS
+─────────────────────────────────────────────────
+fs-hackathon - be247adf-d76d-47cf-aa81-849fd30a73b7
+  url:  https://fs-hackathon.netlify.app
+  account: FS
+─────────────────────────────────────────────────
+happy-birthday-maram - 4d2cd00b-800c-4d25-99d8-8a1456609406
+  url:  https://happy-birthday-maram.netlify.app
+  account: FS
+─────────────────────────────────────────────────
+for-my-sisso-1 - efe8b699-9cba-47d2-a94b-7e2ecab82447
+  url:  https://for-my-sisso-1.netlify.app
+  repo: https://github.com/Farhans123456/Surprise-Website-For-Sister-V3
+  account: FS
+─────────────────────────────────────────────────
+golden-profiterole-0fa9a3 - 316540a9-a38d-4637-bf5d-365db39600ae
+  url:  https://golden-profiterole-0fa9a3.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-41d47
+  account: FS
+─────────────────────────────────────────────────
+boisterous-pika-163eb5 - 3c4c6113-180f-4ddd-8fd1-9690a426c710
+  url:  https://boisterous-pika-163eb5.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-918cc
+  account: FS
+─────────────────────────────────────────────────
+prismatic-caramel-c19711 - cc60a2be-e9c0-4f38-b2ed-e1381943ae00
+  url:  https://prismatic-caramel-c19711.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-4ff74
+  account: FS
+─────────────────────────────────────────────────
+glowing-cendol-2a8e73 - 6cde4ee1-2d7a-450a-bcc0-11a0e9a87037
+  url:  https://glowing-cendol-2a8e73.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-7b120
+  account: FS
+─────────────────────────────────────────────────
+fantastic-gumdrop-062589 - 640999d5-78b3-45ff-823d-8ea927d36777
+  url:  https://fantastic-gumdrop-062589.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-1410d
+  account: FS
+─────────────────────────────────────────────────
+jade-bublanina-f74c9c - f06839d6-7275-45c4-9ef1-56c47825ef58
+  url:  https://jade-bublanina-f74c9c.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-f3828
+  account: FS
+─────────────────────────────────────────────────
+bejewelled-pastelito-6d20a9 - 695b4255-188c-4657-b22a-ecc26d3333a9
+  url:  https://bejewelled-pastelito-6d20a9.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-f35cb
+  account: FS
+─────────────────────────────────────────────────
+comforting-pithivier-9f77d7 - 3b404235-27c5-45d5-89a1-c46a46281bf2
+  url:  https://comforting-pithivier-9f77d7.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-ffb70
+  account: FS
+─────────────────────────────────────────────────
+shiny-tartufo-a8267c - a0765846-f63b-4770-a792-c38309d096bb
+  url:  https://shiny-tartufo-a8267c.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-a62a9
+  account: FS
+─────────────────────────────────────────────────
+lucent-beijinho-1dba28 - 7f888abc-2994-4797-b490-610cc5617caf
+  url:  https://lucent-beijinho-1dba28.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template-bffda
+  account: FS
+─────────────────────────────────────────────────
+sprightly-snickerdoodle-714b92 - bd82e8e6-00bf-4639-8243-d9fbc9dd683e
+  url:  https://sprightly-snickerdoodle-714b92.netlify.app
+  repo: https://github.com/Farhans123456/hydrogen-template
+  account: FS
+─────────────────────────────────────────────────
+for-my-sweetheart1 - 53bc32d0-ce4f-44b6-8d35-bdd44650fd4c
+  url:  https://for-my-sweetheart1.netlify.app
+  repo: https://github.com/Farhans123456/Express-You-Love
+  account: FS
+─────────────────────────────────────────────────
