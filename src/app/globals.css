@@ -4892,19 +4892,7 @@ html.theme-transitioning *::after {
 
 @media (max-width: 768px) {
   .section-divider {
-    margin: 36px auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .section-divider {
-    max-width: 80px;
-    margin: 28px auto;
-  }
-
-  .section-divider::before {
-    width: 5px;
-    height: 5px;
+    display: none;
   }
 }
 
@@ -10063,10 +10051,10 @@ a[class*="cta"]:hover {
   width: 120px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* Responsive — section dividers hidden on mobile */
+@media (max-width: 768px) {
   .section-divider-visible::before {
-    width: 80px;
+    display: none;
   }
 }
 

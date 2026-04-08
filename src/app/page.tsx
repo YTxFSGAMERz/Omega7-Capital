@@ -109,13 +109,7 @@ export default function Home() {
           {/* Typewriter effect */}
           <HeroTypewriter />
 
-          {/* Mobile scroll hint — CSS-only bouncing chevron */}
-          <div className="hero-scroll-hint" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 5v14" />
-              <path d="m19 12-7 7-7-7" />
-            </svg>
-          </div>
+
         </section>
 
         {/* Decorative separator between hero and content */}
