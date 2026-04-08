@@ -75,10 +75,8 @@ html {
 html {
   scroll-behavior: smooth;
   view-transition-name: root;
-  /* iOS momentum / inertia scrolling */
-  -webkit-overflow-scrolling: touch;
-  /* Prevent overscroll bounce from feeling laggy */
-  overscroll-behavior-y: none;
+  /* Native mobile feel: allow bounce and momentum */
+  overflow-x: hidden;
 }
 
 body {
@@ -91,11 +89,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  /* Let the browser handle vertical pan natively (finger scroll) */
-  touch-action: pan-y;
+  /* Optimization: hide horizontal overflow globally */
+  overflow-x: hidden;
   /* Momentum scrolling on iOS */
   -webkit-overflow-scrolling: touch;
 }
+
+/* ── Mobile Touch Optimization ────────────────────────────────────────── */
+/* Disable smooth scroll for touch devices to ensure 1:1 responsiveness    */
+/* while keeping it for desktop precision/anchor links.                   */
+@media (hover: none) and (pointer: coarse) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
 
 
 /* ============================================
