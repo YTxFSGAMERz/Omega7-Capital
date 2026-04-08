@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     "*.space.z.ai",
   ],
   webpack: (config) => {
-    config.resolve.alias['@/components'] = path.resolve(__dirname, 'src/app/components');
+    config.resolve.alias['@/components'] = path.resolve(__dirname, 'src/components');
     return config;
   },
 };

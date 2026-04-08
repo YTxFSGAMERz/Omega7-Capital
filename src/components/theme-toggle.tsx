@@ -1,61 +1,89 @@
-﻿'use client';
+'use client';
 
-import { useState, useEffect, useCallback } from 'react';
 import { useTheme } from 'next-themes';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function useIsMounted() {
-  const mountedRef = require('react').useRef(false);
-  require('react').useEffect(() => {
+  const mountedRef = useRef(false);
+
+  useEffect(() => {
     mountedRef.current = true;
-    return () => { mountedRef.current = false; };
+    return () => {
+      mountedRef.current = false;
+    };
   }, []);
+
   return mountedRef;
 }
 
-export function ThemeToggle() {
+// startViewTransition is now standard in modern browser types, 
+// if not, we cast to any at point of use to avoid conflicting declarations.
+
+export default function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const mounted = useIsMounted();
   const [tick, setTick] = useState(0);
-  const prevThemeRef = require('react').useRef(resolvedTheme);
+  const prevThemeRef = useRef(resolvedTheme);
 
-  require('react').useEffect(() => {
+  useEffect(() => {
     if (prevThemeRef.current !== resolvedTheme) {
       prevThemeRef.current = resolvedTheme;
-      requestAnimationFrame(() => setTick((t: number) => t + 1));
+      requestAnimationFrame(() => setTick((t) => t + 1));
     }
   }, [resolvedTheme]);
 
+  // Suppress hydration warning by using the tick to force re-render
   const _ = tick;
   void _;
 
-  const toggleTheme = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-    const isDark = resolvedTheme === 'dark';
-    const x = e.clientX;
-    const y = e.clientY;
+  const toggleTheme = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      const isDark = resolvedTheme === 'dark';
+      const newTheme = isDark ? 'light' : 'dark';
 
-    if (document.startViewTransition) {
-      document.documentElement.style.setProperty('--theme-x', `${x}px`);
-      document.documentElement.style.setProperty('--theme-y', `${y}px`);
-      document.documentElement.style.setProperty('--theme-radius', '120%');
-      
-      const transition = document.startViewTransition(() => {
-        document.documentElement.classList.toggle('dark', !isDark);
-      });
-      
-      transition.finished.then(() => {
-        document.documentElement.style.removeProperty('--theme-x');
-        document.documentElement.style.removeProperty('--theme-y');
-        document.documentElement.style.removeProperty('--theme-radius');
-      });
-    } else {
-      setTheme(isDark ? 'light' : 'dark');
-    }
-  }, [resolvedTheme, setTheme]);
+      // Calculate click position relative to viewport for the circle origin
+      const x = e.clientX;
+      const y = e.clientY;
+
+      // Calculate max distance from click to any corner (to ensure circle covers entire viewport)
+      const maxRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y)
+      );
+
+      // Use View Transitions API if available
+      if (document.startViewTransition) {
+        // Set CSS custom properties for the circle origin
+        document.documentElement.style.setProperty('--theme-x', `${x}px`);
+        document.documentElement.style.setProperty('--theme-y', `${y}px`);
+        document.documentElement.style.setProperty('--theme-radius', `${maxRadius}px`);
+
+        const transition = document.startViewTransition(() => {
+          document.documentElement.classList.toggle('dark', !isDark);
+        });
+
+        // Clean up custom properties after transition
+        transition.finished.then(() => {
+          document.documentElement.style.removeProperty('--theme-x');
+          document.documentElement.style.removeProperty('--theme-y');
+          document.documentElement.style.removeProperty('--theme-radius');
+        });
+      } else {
+        // Fallback: instant toggle without animation
+        setTheme(newTheme);
+      }
+    },
+    [resolvedTheme, setTheme]
+  );
 
   if (!mounted.current) {
     return (
-      <button className="theme-toggle-btn" aria-label="Toggle theme" style={{ opacity: 0 }}>
+      <button
+        className="theme-toggle-btn"
+        aria-label="Toggle theme"
+        style={{ opacity: 0 }}
+      >
         <span className="theme-toggle-icon">☾</span>
       </button>
     );
